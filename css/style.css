@@ -79,6 +79,10 @@ button {
   align-items: center;
 }
 
+.price {
+  display: inline-block;
+}
+
 .card {
   min-width: 350px;
   border: none;
