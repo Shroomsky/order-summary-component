@@ -60,6 +60,7 @@ body {
 	background-image: url(../images/pattern-background-mobile.svg);
 	background-repeat: no-repeat;
 	background-size: cover;
+	backdrop-filter: saturate(0.6);
 }
 a,
 button {
