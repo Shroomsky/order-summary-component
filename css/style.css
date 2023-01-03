@@ -1,0 +1,187 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  min-height: 100vh;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  font-family: "Red Hat Display", sans-serif;
+  background-image: url(../images/pattern-background-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+a,
+button {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.wrapper {
+  flex: 1 0 auto;
+  width: 375px;
+  padding: 15px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  min-width: 350px;
+  border: none;
+  border-radius: 15px;
+  overflow: hidden;
+  background-color: hsl(225deg, 100%, 98%);
+}
+.card .order {
+  text-align: center;
+  padding: 25px;
+}
+.card .order h1 {
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+.card .order p {
+  color: hsl(224deg, 23%, 55%);
+  padding: 25px;
+  font-size: 1rem;
+}
+.card .order a:hover {
+  filter: brightness(1.8);
+  font-weight: 700;
+}
+.card .order a.proceed_btn {
+  -webkit-appearance: button;
+     -moz-appearance: button;
+          appearance: button;
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+  color: hsl(225deg, 100%, 98%);
+  background-color: hsl(245deg, 75%, 52%);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin: 25px 0;
+  box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.2);
+  letter-spacing: 1.3px;
+}
+.card .order a.cancel {
+  text-decoration: none;
+  font-weight: 900;
+  color: hsl(224deg, 23%, 55%);
+}
+.card .order a.cancel:hover {
+  color: hsl(223deg, 47%, 23%);
+  filter: brightness(0.8);
+}
+.card .order .summary {
+  width: 100%;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+  background-color: hsl(222deg, 60%, 96%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+}
+.card .order .summary a {
+  font-weight: 900;
+  color: hsl(245deg, 75%, 52%);
+}
+.card .order .summary ul {
+  border-right: 60px solid transparent;
+  font-weight: 900;
+}
+.card .order .summary ul :nth-child(2) {
+  font-weight: 400;
+  color: hsl(224deg, 23%, 55%);
+}
+
+.footer {
+  bottom: 0;
+  padding: 0.5rem;
+  width: 100%;
+  color: #fff;
+  background-color: hsl(223deg, 47%, 23%);
+}
+.footer .attribution {
+  text-align: center;
+}
+.footer .attribution a {
+  text-decoration: none;
+  color: #fff;
+}
+.footer .attribution a:visited {
+  color: #fff;
+}
+
+@media (min-width: 1200px) {
+  body {
+    background-size: contain;
+    background-image: url(../images/pattern-background-desktop.svg), linear-gradient(hsl(225deg, 100%, 94%), hsl(225deg, 100%, 94%));
+    background-color: hsl(222deg, 60%, 96%);
+    background-blend-mode: multiply;
+  }
+  .card {
+    width: 28rem;
+  }
+  .card .order .summary ul {
+    border-right: 140px solid transparent;
+  }
+}/*# sourceMappingURL=style.css.map */

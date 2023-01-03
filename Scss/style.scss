@@ -1,0 +1,196 @@
+@use "./colors" as colors;
+
+//============CSS Reset==========//
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html,
+body {
+	min-height: 100vh;
+}
+body {
+	line-height: 1.5;
+	-webkit-font-smoothing: antialiased;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+	display: block;
+	max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	overflow-wrap: break-word;
+}
+#root,
+#__next {
+	isolation: isolate;
+}
+ul,
+ol {
+	list-style: none;
+}
+//============CSS Reset==========//
+
+body {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-size: 15px;
+	font-family: "Red Hat Display", sans-serif;
+	background-image: url(../images/pattern-background-mobile.svg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+a,
+button {
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+//=================Wrapper=============//
+.wrapper {
+	flex: 1 0 auto;
+	width: 375px;
+	padding: 15px 0px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+//=================Wrapper=============//
+
+//=================Card=============//
+.card {
+	min-width: 350px;
+	border: none;
+	border-radius: 15px;
+	overflow: hidden;
+	background-color: colors.$Very_pale_blue;
+	& .order {
+		text-align: center;
+		padding: 25px;
+		& h1 {
+			font-size: 1.5rem;
+			font-weight: 900;
+		}
+		& p {
+			color: colors.$Desaturated_blue;
+			padding: 25px;
+			font-size: 1rem;
+		}
+		& a:hover {
+			filter: brightness(1.8);
+			font-weight: 700;
+		}
+		& a.proceed_btn {
+			appearance: button;
+			width: 100%;
+			padding: 15px;
+			border: none;
+			border-radius: 8px;
+			color: colors.$Very_pale_blue;
+			background-color: colors.$Bright_blue;
+			text-decoration: none;
+			font-weight: 700;
+			font-size: 1.1rem;
+			margin: 25px 0;
+			box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.2);
+			letter-spacing: 1.3px;
+		}
+		& a.cancel {
+			text-decoration: none;
+			font-weight: 900;
+			color: colors.$Desaturated_blue;
+			&:hover {
+				color: colors.$Dark_blue;
+				filter: brightness(0.8);
+			}
+		}
+		& .summary {
+			width: 100%;
+			border-radius: 8px;
+			position: relative;
+			overflow: hidden;
+			background-color: colors.$soft_pale_blue;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			padding: 15px;
+			& a {
+				font-weight: 900;
+				color: colors.$Bright_blue;
+			}
+			& ul {
+				border-right: 60px solid transparent;
+				font-weight: 900;
+				:nth-child(2) {
+					font-weight: 400;
+					color: colors.$Desaturated_blue;
+				}
+			}
+		}
+	}
+}
+//=================Card=============//
+
+//=====================Footer================//
+.footer {
+	bottom: 0;
+	padding: 0.5rem;
+	width: 100%;
+	color: #fff;
+	background-color: colors.$Dark_blue;
+	& .attribution {
+		text-align: center;
+		& a {
+			text-decoration: none;
+			color: #fff;
+			&:visited {
+				color: #fff;
+			}
+		}
+	}
+}
+//=====================Footer================//
+
+//=====================Media================//
+@media (min-width: 1200px) {
+	body {
+		background-size: contain;
+		background-image: url(../images/pattern-background-desktop.svg),
+			linear-gradient(colors.$Pale_blue, colors.$Pale_blue);
+		background-color: colors.$soft_pale_blue;
+		background-blend-mode: multiply;
+	}
+	.card {
+		width: 28rem;
+		& .order {
+			& .summary {
+				& ul {
+					border-right: 140px solid transparent;
+				}
+			}
+		}
+	}
+}
+//=====================Media================//
